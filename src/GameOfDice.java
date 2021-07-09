@@ -48,7 +48,7 @@ public class GameOfDice {
 
 
 
-        while ((answer.equals("yes") || answer.equals("y")) && totalScore <= 100){             //game loop. game should exit when score >= 100 or user gives input that doesnt start with 'y'
+        while (answer.startsWith("y") && totalScore < 100){             //game loop. game should exit when score >= 100 or user gives input that doesnt start with 'y'
             int dice1 = randomizer.nextInt(6) + 1;        //random integers from 1-25
             int dice2 = randomizer.nextInt(6) + 1;
             if (dice1 == 1 && dice2 == 1){
